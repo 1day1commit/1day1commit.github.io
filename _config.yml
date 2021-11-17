@@ -1,6 +1,6 @@
 # Site Info
 title: '개발 기록장'
-tagline: '개발 공부 일지'
+tagline: 'Today I Learned'
 description: '공부한 것을 기록하는 공간'
 baseurl: ""
 url: https://1day1commit.github.io
