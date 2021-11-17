@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/terminal/2021-11-04/path/</loc>
-<lastmod>2021-11-04T00:00:00+09:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/til/2021-11-13/til-01/</loc>
 <lastmod>2021-11-13T13:06:24+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/html-css/2021-11-13/html-css-1/</loc>
-<lastmod>2021-11-13T23:06:24+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/til/2021-11-15/til-02/</loc>
@@ -61,8 +53,5 @@
 </url>
 <url>
 <loc>http://localhost:4000/blog/page2/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/blog/page3/</loc>
 </url>
 </urlset>
