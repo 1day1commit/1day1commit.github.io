@@ -8,7 +8,7 @@ categories:
 tags:
   - [WeCode, WeStudy, Array, JavaScript]
 
-permalink: /javascript/:year-:month-:day/:title/
+permalink: /:title/
 
 date: 2021-11-17T08:17:35+0900
 last_modified_at: 2021-11-17T08:17:39+0900

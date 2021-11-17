@@ -19,7 +19,7 @@
   />
 
   <title>
-     HTML & CSS 기초
+     TIL-01
     &middot; 개발 공부 일지 
   </title>
 
@@ -256,8 +256,8 @@
         </div>
       </div>
       <div class="container content"><div class="post">
-  <h1 class="post-title">HTML & CSS 기초</h1>
-  <span class="post-date">15 Nov 2021</span>
+  <h1 class="post-title">TIL-01</h1>
+  <span class="post-date">13 Nov 2021</span>
   <a href="#disqus_thread"></a>
    | 
   <a
@@ -267,122 +267,25 @@
   >
   
   <a
-    href="/blog/tags/#html-css"
+    href="/blog/tags/#wecode"
     class="post-tag"
-    >HTML-CSS</a
+    >WeCode</a
+  >
+  
+  <a
+    href="/blog/tags/#netlify"
+    class="post-tag"
+    >Netlify</a
   >
    
   <article><p><br />
 <br /></p>
 
-<h1 id="font-family">font-family</h1>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">#title</span> <span class="p">{</span>
-  <span class="nl">font-family</span><span class="p">:</span> <span class="n">Georgia</span><span class="p">,</span> <span class="s2">'Times New Roman'</span><span class="p">,</span> <span class="n">Times</span><span class="p">,</span> <span class="nb">serif</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">'Times New Roman'</code> 만 따옴표로 감싸져 있는데, 폰트 이름에 공백이 들어가면 반드시 따옴표로 감싸주어야 합니다.</p>
-
-<p><br /></p>
-
-<h1 id="color">color</h1>
-
-<p>색을 표현하는 방법에는 여러가지가 있습니다.</p>
+<h1 id="오늘-한-일-회고">오늘 한 일 (회고)</h1>
 
 <ul>
-  <li>hex 색상코드: 여섯자리로 표현 ex) #bebbb1</li>
-  <li>rgb 값: 빨강, 초록, 파랑으로 표현 ex) rgb(244, 32, 39)</li>
-  <li>hsl: 색상, 채도, 명도(hue, saturation, lightness)로 표현 ex) hsl(2, 79%, 30%)</li>
+  <li>위코드에서 배운 내용을 가지고 HTML 과 CSS 를 이용해 자기소개 페이지를 만들고 <a href="https://1day1commit.github.io/html-css/html-css-1/" target="\_blank">블로그 글</a> 작성</li>
 </ul>
-
-<p><br /></p>
-
-<h1 id="text-indent">text-indent</h1>
-
-<p><code class="language-plaintext highlighter-rouge">text-indent</code> 를 사용하면 CSS 에서 들여쓰기를 할 수 있습니다.</p>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.title</span> <span class="p">{</span>
-  <span class="nl">text-indent</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p><br /></p>
-
-<p class="notice--info">문장 사이에 공백을 여러개 추가하고 싶으면 공백 대신 <code class="language-plaintext highlighter-rouge">&amp;nbsp;</code> 를 원하는 만큼 넣어주면 됩니다.</p>
-
-<p><br /></p>
-
-<h1 id="border">Border</h1>
-
-<p><code class="language-plaintext highlighter-rouge">border: 두께 선 스타일 선 색깔</code></p>
-
-<p>border 의 값 순서는 중요하지 않지만 coding convention(코딩 규칙)에 따라 순서를 맞춰주는 것이 좋습니다.</p>
-
-<p><br /></p>
-
-<p>선 스타일 종류</p>
-
-<ul>
-  <li>dotted</li>
-  <li>dashed</li>
-  <li><strong>solid</strong></li>
-  <li>double</li>
-  <li>groove</li>
-  <li>ridge</li>
-  <li>inset</li>
-  <li>outset</li>
-</ul>
-
-<p><br /></p>
-
-<p>텍스트에 밑줄을 쳐주는 <code class="language-plaintext highlighter-rouge">text-decoration</code> 는 밑줄의 두께나 색깔 등을 원하는대로 커스터마이징 하기 어렵습니다.</p>
-
-<p>개발자들은 대부분 원하는대로 디자인 할 수 있는 <code class="language-plaintext highlighter-rouge">border-bottom</code> 으로 밑줄을 구현하는 것을 선호합니다.</p>
-
-<p><br /></p>
-
-<h1 id="box-sizing">box-sizing</h1>
-
-<p>눈으로 보이는 너비가 개발자가 코딩하는 값과 일치해야 코딩과 머리속으로 생각하는 로직이 같아집니다. 따라서 <code class="language-plaintext highlighter-rouge">box-sizing</code> 은 항상 적용해야하는 프로퍼티입니다.</p>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">*</span> <span class="p">{</span>
-  <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>꼭 적용하고 시작하기!</p>
-
-<p><br /></p>
-
-<h1 id="css-specificity">CSS Specificity</h1>
-
-<p>selector 표현에는 우선순위가 있습니다.</p>
-
-<ul>
-  <li>inline styling: 1 0 0 0</li>
-  <li>id: 0 1 0 0</li>
-  <li>class: 0 0 1 0</li>
-  <li>tag: 0 0 0 1</li>
-</ul>
-
-<p>tag selector 가 아무리 많아도 class selector 하나를 이길 수 없습니다.</p>
-
-<p class="notice--info">애초에 이런 계산이 필요하지 않도록 클래스를 사용해 최대한 중복을 피하는 것이 좋습니다.</p>
-
-<p><br /></p>
-
-<h1 id="img">img</h1>
-
-<p>너무 큰 이미지를 <code class="language-plaintext highlighter-rouge">background-image</code> 로 넣으면 하면 원본 이미지 크기가 줄지 않고 박스 크기만큼 짤려서 보입니다. 그럴경우 <code class="language-plaintext highlighter-rouge">background-size</code> 프로퍼티를 추가해줍니다.</p>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.bg-img</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
-  <span class="nl">height</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
-  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url(./img/profile.png)</span><span class="p">;</span>
-  <span class="nl">background-size</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
 </article>
 </div>
 
@@ -392,7 +295,7 @@
     
     <li>
       <h3>
-        <a href="/javascript/2021-11-17/javascript-1/">
+        <a href="/javascript-1/">
           Javascript Array 메서드 정리
           <small>17 Nov 2021</small>
         </a>
@@ -401,7 +304,7 @@
     
     <li>
       <h3>
-        <a href="/til/2021-11-17/til-04/">
+        <a href="/til-04/">
           TIL-04
           <small>17 Nov 2021</small>
         </a>
@@ -410,7 +313,7 @@
     
     <li>
       <h3>
-        <a href="/html-css/2021-11-16/html-css-5/">
+        <a href="/html-css-4/">
           display: flex
           <small>16 Nov 2021</small>
         </a>

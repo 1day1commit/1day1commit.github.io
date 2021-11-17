@@ -4,7 +4,7 @@
  <title>개발 기록장</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2021-11-18T01:36:11+09:00</updated>
+ <updated>2021-11-18T01:52:47+09:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>TAEYEONG JEONG</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Javascript Array 메서드 정리</title>
-   <link href="http://localhost:4000/javascript/2021-11-17/javascript-1/"/>
+   <link href="http://localhost:4000/javascript-1/"/>
    <updated>2021-11-17T08:17:35+09:00</updated>
-   <id>http://localhost:4000/javascript/2021-11-17/javascript-1</id>
+   <id>http://localhost:4000/javascript-1</id>
    <content type="html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
@@ -290,9 +290,9 @@
  
  <entry>
    <title>TIL-04</title>
-   <link href="http://localhost:4000/til/2021-11-17/til-04/"/>
+   <link href="http://localhost:4000/til-04/"/>
    <updated>2021-11-17T08:07:35+09:00</updated>
-   <id>http://localhost:4000/til/2021-11-17/til-04</id>
+   <id>http://localhost:4000/til-04</id>
    <content type="html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
@@ -307,7 +307,7 @@
 &lt;h1 id=&quot;오늘-한-일-회고&quot;&gt;오늘 한 일 (회고)&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;JavaScript Array 메서드 몇 가지를 다시 공부하고 &lt;a href=&quot;../../javascript/javascript-1&quot; target=&quot;\_blank&quot;&gt;블로그 글&lt;/a&gt; 작성&lt;/li&gt;
+  &lt;li&gt;JavaScript Array 메서드 몇 가지를 다시 공부하고 &lt;a href=&quot;../javascript-1&quot; target=&quot;\_blank&quot;&gt;블로그 글&lt;/a&gt; 작성&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=wcsVjmHrUQg&amp;amp;list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&quot; target=&quot;\_blank&quot;&gt;드림코딩 by 엘리 자바스크립트 배우기전 꼭 봐야할 영상&lt;/a&gt; 강의 시청&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -335,9 +335,9 @@
  
  <entry>
    <title>display: flex</title>
-   <link href="http://localhost:4000/html-css/2021-11-16/html-css-5/"/>
+   <link href="http://localhost:4000/html-css-4/"/>
    <updated>2021-11-16T20:37:11+09:00</updated>
-   <id>http://localhost:4000/html-css/2021-11-16/html-css-5</id>
+   <id>http://localhost:4000/html-css-4</id>
    <content type="html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
@@ -533,9 +533,9 @@
  
  <entry>
    <title>HTML & CSS</title>
-   <link href="http://localhost:4000/html-css/2021-11-16/html-css-4/"/>
+   <link href="http://localhost:4000/html-css-3/"/>
    <updated>2021-11-16T11:36:11+09:00</updated>
-   <id>http://localhost:4000/html-css/2021-11-16/html-css-4</id>
+   <id>http://localhost:4000/html-css-3</id>
    <content type="html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
@@ -826,9 +826,9 @@
  
  <entry>
    <title>시맨틱 웹(Semantic Web), 시맨틱 태그(Semantic Tag)</title>
-   <link href="http://localhost:4000/html-css/2021-11-16/html-css-3/"/>
+   <link href="http://localhost:4000/html-css-2/"/>
    <updated>2021-11-16T01:55:34+09:00</updated>
-   <id>http://localhost:4000/html-css/2021-11-16/html-css-3</id>
+   <id>http://localhost:4000/html-css-2</id>
    <content type="html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
@@ -896,27 +896,27 @@
  
  <entry>
    <title>TIL-03</title>
-   <link href="http://localhost:4000/til/2021-11-16/til-03/"/>
+   <link href="http://localhost:4000/til-03/"/>
    <updated>2021-11-16T01:15:34+09:00</updated>
-   <id>http://localhost:4000/til/2021-11-16/til-03</id>
+   <id>http://localhost:4000/til-03</id>
    <content type="html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;오늘-한-일-회고&quot;&gt;오늘 한 일 (회고)&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;시맨틱 웹과 시맨틱 태그에 대해 공부하고 &lt;a href=&quot;../../html-css/html-css-3&quot; target=&quot;\_blank&quot;&gt;블로그 글&lt;/a&gt; 작성&lt;/li&gt;
-  &lt;li&gt;HTML 과 CSS 공부하고 &lt;a href=&quot;../../html-css/html-css-4&quot; target=&quot;\_blank&quot;&gt;블로그 글&lt;/a&gt; 작성&lt;/li&gt;
-  &lt;li&gt;CSS Flex 에 대해 공부하고 &lt;a href=&quot;../../html-css/html-css-5&quot; target=&quot;\_blank&quot;&gt;블로그 글&lt;/a&gt; 작성&lt;/li&gt;
+  &lt;li&gt;시맨틱 웹과 시맨틱 태그에 대해 공부하고 &lt;a href=&quot;../html-css-2&quot; target=&quot;\_blank&quot;&gt;블로그 글&lt;/a&gt; 작성&lt;/li&gt;
+  &lt;li&gt;HTML 과 CSS 공부하고 &lt;a href=&quot;../html-css-3&quot; target=&quot;\_blank&quot;&gt;블로그 글&lt;/a&gt; 작성&lt;/li&gt;
+  &lt;li&gt;CSS Flex 에 대해 공부하고 &lt;a href=&quot;../html-css-4&quot; target=&quot;\_blank&quot;&gt;블로그 글&lt;/a&gt; 작성&lt;/li&gt;
 &lt;/ul&gt;
 </content>
  </entry>
  
  <entry>
    <title>HTML & CSS 기초</title>
-   <link href="http://localhost:4000/html-css/2021-11-15/html-css-2/"/>
+   <link href="http://localhost:4000/html-css-1/"/>
    <updated>2021-11-15T18:17:53+09:00</updated>
-   <id>http://localhost:4000/html-css/2021-11-15/html-css-2</id>
+   <id>http://localhost:4000/html-css-1</id>
    <content type="html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
@@ -1033,32 +1033,32 @@
  
  <entry>
    <title>TIL-02</title>
-   <link href="http://localhost:4000/til/2021-11-15/til-02/"/>
+   <link href="http://localhost:4000/til-02/"/>
    <updated>2021-11-15T17:17:53+09:00</updated>
-   <id>http://localhost:4000/til/2021-11-15/til-02</id>
+   <id>http://localhost:4000/til-02</id>
    <content type="html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;오늘-한-일-회고&quot;&gt;오늘 한 일 (회고)&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;HTML 과 CSS 기초를 다시 복습하고 &lt;a href=&quot;../../html-css/html-css-2&quot; target=&quot;\_blank&quot;&gt;블로그 글&lt;/a&gt; 작성&lt;/li&gt;
+  &lt;li&gt;HTML 과 CSS 기초를 다시 복습하고 &lt;a href=&quot;../html-css-1&quot; target=&quot;\_blank&quot;&gt;블로그 글&lt;/a&gt; 작성&lt;/li&gt;
 &lt;/ul&gt;
 </content>
  </entry>
  
  <entry>
    <title>TIL-01</title>
-   <link href="http://localhost:4000/til/2021-11-13/til-01/"/>
+   <link href="http://localhost:4000/til-01/"/>
    <updated>2021-11-13T13:06:24+09:00</updated>
-   <id>http://localhost:4000/til/2021-11-13/til-01</id>
+   <id>http://localhost:4000/til-01</id>
    <content type="html">&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;오늘-한-일-회고&quot;&gt;오늘 한 일 (회고)&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;위코드에서 배운 내용을 가지고 HTML 과 CSS 를 이용해 자기소개 페이지를 만들고 &lt;a href=&quot;../../html-css/html-css-1&quot; target=&quot;\_blank&quot;&gt;블로그 글&lt;/a&gt; 작성&lt;/li&gt;
+  &lt;li&gt;위코드에서 배운 내용을 가지고 HTML 과 CSS 를 이용해 자기소개 페이지를 만들고 &lt;a href=&quot;https://1day1commit.github.io/html-css/html-css-1/&quot; target=&quot;\_blank&quot;&gt;블로그 글&lt;/a&gt; 작성&lt;/li&gt;
 &lt;/ul&gt;
 </content>
  </entry>
