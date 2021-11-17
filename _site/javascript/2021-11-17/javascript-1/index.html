@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1"
+  />
+
+  <title>
+     Javascript Array 메서드 정리
+    &middot; 개발 공부 일지 
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/main.css" />
+  <link
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400"
+  />
+
+  <!-- Icons -->
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/assets/favicon/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/assets/favicon/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/assets/favicon/favicon-16x16.png"
+  />
+  <link
+    rel="manifest"
+    href="/assets/favicon/site.webmanifest"
+  />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- RSS -->
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="RSS"
+    href="/atom.xml"
+  />
+
+  
+  <script
+    type="text/javascript"
+    async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"
+  ></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true } });
+  </script>
+  
+</head>
+
+
+  <body>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <div class="sidebar-personal-info">
+      <div class="">
+        <img src="/public/profile.png" alt="profile picture" />
+      </div>
+      <div class="sidebar-personal-info-section">
+        <p></p>
+      </div>
+      
+      
+      
+      <div class="sidebar-personal-info-section">
+        <p> Contact Me
+        
+        
+        
+        <a href="https://github.com/1day1commit">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+        
+        |
+        
+        
+        
+        <a href="mailto:dev.taeyeong@gmail.com">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>
+        
+        
+        
+        <br>
+        <span class="notice">
+
+        반가워요 :)
+        </span>
+        </p>
+      </div>
+      
+    </div>
+  </div>
+
+<!-- 사이드 메뉴시작 -->
+  <nav class="sidebar-nav">
+    
+      
+      
+      
+
+      
+      <!-- 사이드바 대분류 -->
+      <span class="foldable">
+        <a class="sidebar-nav-item " href="/">
+          Categories
+        </a>
+
+        
+          
+            
+            
+            
+            <!-- 사이드바 카테고리 소분류  -->
+
+              <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#til">
+                
+                TIL (Today I Learned) -
+                  
+                  
+                  4
+              </a>
+          
+        
+          
+            
+            
+            
+            <!-- 사이드바 카테고리 소분류  -->
+
+              <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#알고리즘">
+                
+                알고리즘 -
+                  
+                  
+                  0
+              </a>
+          
+        
+      </span>
+
+    
+      
+      
+      
+
+      
+      <!-- 사이드바 대분류 -->
+      <span class="">
+        <a class="sidebar-nav-item " href="/blog/tags/">
+          Tags
+        </a>
+
+        
+      </span>
+
+    
+      
+      
+      
+
+      
+      <!-- 사이드바 대분류 -->
+      <span class="">
+        <a class="sidebar-nav-item " href="/about/">
+          About
+        </a>
+
+        
+      </span>
+
+    
+
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead nav-down">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="개발 기록장">
+              <!-- <img class="masthead-logo" src=""/> -->
+              <img class="masthead-logo" src="/assets/images/pngwing.png" />
+
+              <small id="blog-title">개발 공부 일지</small>
+            </a>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content"><div class="post">
+  <h1 class="post-title">Javascript Array 메서드 정리</h1>
+  <span class="post-date">17 Nov 2021</span>
+  <a href="#disqus_thread"></a>
+   | 
+  <a
+    href="/blog/tags/#wecode"
+    class="post-tag"
+    >WeCode</a
+  >
+  
+  <a
+    href="/blog/tags/#westudy"
+    class="post-tag"
+    >WeStudy</a
+  >
+  
+  <a
+    href="/blog/tags/#array"
+    class="post-tag"
+    >Array</a
+  >
+  
+  <a
+    href="/blog/tags/#javascript"
+    class="post-tag"
+    >JavaScript</a
+  >
+   
+  <article><p><br />
+<br /></p>
+
+<h1 id="array">Array</h1>
+
+<h2 id="slice">slice</h2>
+
+<p><code class="language-plaintext highlighter-rouge">slice()</code> 메서드는 배열 내의 특정한 요소의 <code class="language-plaintext highlighter-rouge">index</code> 범위에 따라 새로운 배열을 리턴합니다.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">slice()</code> 메서드는 원본 배열을 변형시키지 않습니다.</strong> 따라서 이 메서드를 사용할 때는 반드시 리턴하는 배열을 받을 새로운 변수를 선언해 주어야 합니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">slice</span><span class="p">(</span> <span class="p">[</span><span class="nx">begin</span><span class="p">[,</span> <span class="nx">end</span><span class="p">]]</span> <span class="p">)</span> <span class="c1">// [] 은 배열을 뜻하는 것이 아니라 생략이 가능하다는 것을 나타냅니다.</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">slice()</code> 메서드의 기본 형태 입니다. <code class="language-plaintext highlighter-rouge">end</code> 는 생략 가능합니다. (<code class="language-plaintext highlighter-rouge">end</code> 가 없을 경우 <code class="language-plaintext highlighter-rouge">begin</code> 도 생략 가능합니다.)</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">begin</code>: 추출 시작점에 대한 인덱스를 의미합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">end</code>: 추출을 종료할 인덱스를 의미합니다. <strong><code class="language-plaintext highlighter-rouge">slice()</code> 는 <code class="language-plaintext highlighter-rouge">end</code> 인덱스를 제외하고 추출합니다.</strong></li>
+</ul>
+
+<p>ex) <code class="language-plaintext highlighter-rouge">slice(1, 4)</code></p>
+
+<p>‘1 &lt;= 인덱스 &lt; 4 추출해줘’ 이렇게 이해하시면 됩니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">newArr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [1, 2, 3, 4, 5] -&gt; 원본 배열이 변형되지 않음</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newArr</span><span class="p">);</span> <span class="c1">// [2, 3, 4]</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p><code class="language-plaintext highlighter-rouge">end</code> 는 생략이 가능하다고 했죠? <code class="language-plaintext highlighter-rouge">begin</code> 만 있을때는 어떻게 되는지 알아보겠습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">newArr2</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newArr2</span><span class="p">);</span> <span class="c1">// [2, 3, 4, 5]</span>
+</code></pre></div></div>
+
+<p>이렇게 추출 시작점부터 배열의 끝까지 추출합니다.</p>
+
+<p><br /></p>
+
+<p><code class="language-plaintext highlighter-rouge">begin</code> 에 음수를 넣었을 때는 인덱스가 아닌 ‘뒤에서 몇 번째 요소인지’ 입니다.</p>
+
+<p>ex) <code class="language-plaintext highlighter-rouge">slice(-2)</code></p>
+
+<p>‘뒤에서 두 개의 요소를 추출해줘’ 라고 생각하면 됩니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">newArr3</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newArr3</span><span class="p">);</span> <span class="c1">// [4, 5]</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>그러면 <code class="language-plaintext highlighter-rouge">end</code> 에 음수를 넣으면 어떻게 될까요? (너무 헷갈려서 맨 뒤로 빼놨는데 그냥 <code class="language-plaintext highlighter-rouge">end</code> 를 음수로 사용하는 경우까지는 생각 안하는게 편할듯 합니다 ㅎㅎ;)</p>
+
+<p><code class="language-plaintext highlighter-rouge">slice(1, -2)</code> 는 ‘1번 인덱스부터 뒤에서 세 번째 요소까지 추출해줘’ 입니다.</p>
+
+<p>음수일 경우 인덱스가 아닌 뒤에서 몇 번째 요소인지를 생각하는데 <code class="language-plaintext highlighter-rouge">end</code> 이기 때문에 본인은 제외합니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">newArr4</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newArr4</span><span class="p">);</span> <span class="c1">// [2, 3]</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="splice">splice</h2>
+
+<p><code class="language-plaintext highlighter-rouge">splice</code> 메서드는 세 가지 경우에 사용합니다.</p>
+
+<ul>
+  <li>배열 내의 특정한 요소를 삭제하고 싶을 때</li>
+  <li>배열 내의 특정한 요소를 다른 요소로 대치하고 싶을 때</li>
+  <li>배열 내에 새로운 요소를 추가하고 싶을 때</li>
+</ul>
+
+<p><br /></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">splice</span><span class="p">(</span><span class="nx">start</span><span class="p">[,</span> <span class="nx">deleteCount</span><span class="p">[,</span> <span class="nx">item1</span><span class="p">[,</span> <span class="nx">item2</span><span class="p">[,</span> <span class="p">...]]]])</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">start</code>: 배열의 변경을 시작할 인덱스</li>
+  <li><code class="language-plaintext highlighter-rouge">deleteCount</code>: 배열에서 제거할 요소의 수, 값을 생략하면 <code class="language-plaintext highlighter-rouge">start</code> 부터 뒤로 모든 요소를 제거합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">item1, item2, ...</code>: 배열에 추가할 요소, 아무 요소도 지정하지 않으면 <code class="language-plaintext highlighter-rouge">splice()</code> 는 요소를 제거하기만 합니다.</li>
+</ul>
+
+<p><br /></p>
+
+<p>예제를 통해 알아보겠습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [1, 2, 10, 4, 5]</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">arr.splice(2, 1, 10)</code> 은 ‘2번 인덱스부터, 1개의 요소를 삭제하고, 그자리에 10 을 추가해 주세요’ 라고 해석하면 됩니다!</p>
+
+<p class="notice--info"><code class="language-plaintext highlighter-rouge">splice()</code> 메서드는 보통 댓글 삭제 기능을 구현할 때 많이 사용한다고 합니다.</p>
+
+<p><br /></p>
+
+<h2 id="filter">filter</h2>
+
+<p><code class="language-plaintext highlighter-rouge">filter()</code> 메서드는 array 관련 메서드로 조건에 맞는 요소들만 모아서 새로운 배열을 반환합니다. 만약 조건에 부합되는 요소가 아무것도 없다면 빈 배열을 반환합니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">callback</span><span class="p">(</span><span class="nx">element</span><span class="p">[,</span> <span class="nx">index</span><span class="p">[,</span> <span class="nx">array</span><span class="p">]])[,</span> <span class="nx">thisArg</span><span class="p">])</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">callback</code>: 각 요소를 시험할 함수, <code class="language-plaintext highlighter-rouge">true</code> 를 반환하면 요소를 유지하고 <code class="language-plaintext highlighter-rouge">false</code> 를 반환하면 요소를 버립니다. <code class="language-plaintext highlighter-rouge">element, index, array</code> 세 가지의 매개변수를 받을 수 있습니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">thisArg</code>: <code class="language-plaintext highlighter-rouge">callback</code> 을 실행할 때 <code class="language-plaintext highlighter-rouge">this</code> 로 사용하는 값</li>
+</ul>
+
+<p>예제를 통해 이해해 보겠습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">43</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">33</span><span class="p">];</span>
+
+<span class="kd">function</span> <span class="nx">isBiggerThanTen</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">value</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">isBiggerThanTen</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">// [43, 28, 20, 33]</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">arr.filter</code> 에 <code class="language-plaintext highlighter-rouge">isBiggerThanTen</code> 이라는 함수가 들어가 있습니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">filter()</code> 메서드는 먼저 첫 번째 요소인 43 을 <code class="language-plaintext highlighter-rouge">isBiggerThanTen</code> 함수에 <code class="language-plaintext highlighter-rouge">value</code> 라는 인자로 보냅니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">isBiggerThanTen</code> 함수는 43 이 10 보다 크니 <code class="language-plaintext highlighter-rouge">true</code> 를 반환하고 <code class="language-plaintext highlighter-rouge">filter()</code> 메서드는 43 요소를 유지합니다.</p>
+
+<p>이런 과정을 마지막 요소까지 진행하면 <code class="language-plaintext highlighter-rouge">[43, 28, 20, 33]</code> 이라는 배열이 리턴됩니다.</p>
+
+<p><br /></p>
+
+<p>그런데 콜백함수를 위의 예제와 같이 나눠서 사용하면 불편하고 가독성도 좋지 않으니 Arrow Function 으로 바꿔주겠습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">43</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">33</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">value</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">value</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">// [43, 28, 20, 33]</span>
+</code></pre></div></div>
+
+<p>이렇게 간단한 코드로 바꿀 수 있습니다.</p>
+
+<p><br /></p>
+
+<h2 id="concat">concat</h2>
+
+<p><code class="language-plaintext highlighter-rouge">concat()</code> 메서드는 주어진 배열에 기존 배열을 합쳐서 새로운 배열을 반환합니다.</p>
+
+<p>원본 배열에 영향을 주지 않으며 새로운 배열이나 원본 배열을 수정해도 서로 영향을 받지 않습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">alphabet</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">c</span><span class="dl">'</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">hangeul</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">ㄱ</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">ㄴ</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">ㄷ</span><span class="dl">'</span><span class="p">];</span>
+
+<span class="nx">alphabet</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">hangeul</span><span class="p">);</span> <span class="c1">// ['a', 'b', 'c', 'ㄱ', 'ㄴ', 'ㄷ']</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>다음은 주의해야 할 점에 대해 알아보겠습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">alpha</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">c</span><span class="dl">'</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]];</span>
+
+<span class="nx">alpha</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// ['a', 'b', 'c', 1, [2, 3]]</span>
+
+<span class="nx">alpha</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]);</span> <span class="c1">// ['a', 'b', 'c', 1, 2, 3]</span>
+</code></pre></div></div>
+
+<p>이렇게 똑같은 배열을 넣어도 변수에 지정해서 넣을 때와 함수안에 직접 배열을 작성해서 넣을 때 리턴값에 차이가 있습니다.</p>
+
+<p><br /></p>
+
+<h2 id="concat-과-filter-응용">concat 과 filter 응용</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">array1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">array2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">];</span>
+
+<span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">array1</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">array2</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">// [1, 2, 3, 4, 5, 3, 4, 5, 6, 7];</span>
+
+<span class="kd">const</span> <span class="nx">eraseDuplicates</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span>
+  <span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">result</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="o">===</span> <span class="nx">index</span>
+<span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ereaseDuplicates</span><span class="p">);</span> <span class="c1">// [1, 2, 3, 4, 5, 6, 7]</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>코드를 이해하기 위해 <code class="language-plaintext highlighter-rouge">indexof()</code> 라는 메서드를 알아보겠습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">indexof</span><span class="p">(</span><span class="nx">searhElement</span><span class="p">[,</span> <span class="nx">fromIndex</span><span class="p">])</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">searchElement</code>: 배열에서 찾을 요소입니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">fromIndex</code>: 검색을 시작할 인덱스입니다.</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">indexof()</code> 메서드는 배열 내에서 찾은 최초의 인덱스 값을 반환합니다.</p>
+
+<p><br /></p>
+
+<p>이제 코드를 해석해보겠습니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">filter()</code> 메서드가 콜백함수에 <code class="language-plaintext highlighter-rouge">result</code> 변수의 요소와 인덱스를 차례로 넣습니다.</p>
+
+<p>처음에 (1, 0)을 넣었을 때 <code class="language-plaintext highlighter-rouge">result.indexOf(el)</code> 값은 0 이 되고 <code class="language-plaintext highlighter-rouge">0 === 0</code> 이므로 <code class="language-plaintext highlighter-rouge">true</code> 가 반환되어 <code class="language-plaintext highlighter-rouge">eraseDuplicates</code> 변수에 1이 들어갑니다.</p>
+
+<p>그다음 (2, 1) 을 넣었을 때도 마찬가지겠죠? (3, 2) (4, 3) (5, 4) 까지 똑같이 들어가다가</p>
+
+<p>(3, 5) 가 콜백함수에 전달되었을 때 <code class="language-plaintext highlighter-rouge">result.indexOf(el)</code> 값은 0 이고 0 은 5와 같지 않음으로 <code class="language-plaintext highlighter-rouge">false</code> 가 반환되어 두 번째 3은 배열에서 없어지게 됩니다.</p>
+
+<p>이런식으로 <code class="language-plaintext highlighter-rouge">result</code> 변수의 끝까지 반복하면 <code class="language-plaintext highlighter-rouge">eraseDuplicates</code> 변수에 중복된 값이 없는 배열이 들어가게 됩니다.</p>
+
+<p><br /></p>
+
+<h2 id="push">push</h2>
+
+<p><code class="language-plaintext highlighter-rouge">push()</code> 메서드를 사용하면 배열의 끝에 하나 이상의 요소를 추가할 수 있습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+
+<span class="nx">arr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [1, 2, 3, 4]</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="pop">pop</h2>
+
+<p><code class="language-plaintext highlighter-rouge">pop()</code> 메서드는 배열의 마지막 요소를 제거하며 제거된 요소를 반환합니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [1, 4]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">// 6</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="shift">shift</h2>
+
+<p><code class="language-plaintext highlighter-rouge">shift()</code> 메서드는 배열의 첫 번째 요소를 제거하며 제거된 요소를 반환합니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [4, 6]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">// [1]</span>
+</code></pre></div></div>
+</article>
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+    <li>
+      <h3>
+        <a href="/til/2021-11-17/til-04/">
+          TIL-04
+          <small>17 Nov 2021</small>
+        </a>
+      </h3>
+    </li>
+    
+    <li>
+      <h3>
+        <a href="/html-css/2021-11-16/html-css-5/">
+          display: flex
+          <small>16 Nov 2021</small>
+        </a>
+      </h3>
+    </li>
+    
+    <li>
+      <h3>
+        <a href="/html-css/2021-11-16/html-css-4/">
+          HTML & CSS
+          <small>16 Nov 2021</small>
+        </a>
+      </h3>
+    </li>
+    
+  </ul>
+</div>
+</div>
+    </div>
+    <!-- search bar -->
+
+    <!-- <a href="/search/" class="search">
+      <i class="fa fa-search" aria-hidden="true"></i>
+    </a> -->
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener(
+          'click',
+          function (e) {
+            var target = e.target;
+
+            if (target === toggle) {
+              checkbox.checked = !checkbox.checked;
+              e.preventDefault();
+            } else if (checkbox.checked && !sidebar.contains(target)) {
+              /* click outside the sidebar when sidebar is open */
+              checkbox.checked = false;
+            }
+          },
+          false
+        );
+      })(document);
+    </script>
+    
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        'script',
+        'https://www.google-analytics.com/analytics.js',
+        'ga'
+      );
+
+      ga('create', '', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    <script
+      id="dsq-count-scr"
+      src="//wayhome25-github-io.disqus.com/count.js"
+      async
+    ></script>
+  </body>
+  
+  <script
+    id="dsq-count-scr"
+    src="//.disqus.com/count.js"
+    async
+  ></script>
+  
+
+  <script type="text/javascript">
+    // Hide Header on on scroll down
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = $('.masthead').outerHeight();
+
+    $(window).scroll(function (event) {
+      didScroll = true;
+    });
+
+    setInterval(function () {
+      if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+      }
+    }, 250);
+
+    function hasScrolled() {
+      var st = $(this).scrollTop();
+
+      // Make sure they scroll more than delta
+      if (Math.abs(lastScrollTop - st) <= delta) return;
+
+      // If they scrolled down and are past the navbar, add class .nav-up.
+      // This is necessary so you never see what is "behind" the navbar.
+      if (st > lastScrollTop && st > navbarHeight) {
+        // Scroll Down
+        $('.masthead').removeClass('nav-down').addClass('nav-up');
+      } else {
+        // Scroll Up
+        if (st + $(window).height() < $(document).height()) {
+          $('.masthead').removeClass('nav-up').addClass('nav-down');
+        }
+      }
+
+      lastScrollTop = st;
+    }
+  </script>
+</html>

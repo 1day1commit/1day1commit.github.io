@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1"
+  />
+
+  <title>
+     Blog
+    &middot; 개발 공부 일지 
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/main.css" />
+  <link
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400"
+  />
+
+  <!-- Icons -->
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/assets/favicon/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/assets/favicon/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/assets/favicon/favicon-16x16.png"
+  />
+  <link
+    rel="manifest"
+    href="/assets/favicon/site.webmanifest"
+  />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- RSS -->
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="RSS"
+    href="/atom.xml"
+  />
+
+  
+  <script
+    type="text/javascript"
+    async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"
+  ></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true } });
+  </script>
+  
+</head>
+
+
+  <body>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <div class="sidebar-personal-info">
+      <div class="">
+        <img src="/public/profile.png" alt="profile picture" />
+      </div>
+      <div class="sidebar-personal-info-section">
+        <p></p>
+      </div>
+      
+      
+      
+      <div class="sidebar-personal-info-section">
+        <p> Contact Me
+        
+        
+        
+        <a href="https://github.com/1day1commit">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+        
+        |
+        
+        
+        
+        <a href="mailto:dev.taeyeong@gmail.com">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>
+        
+        
+        
+        <br>
+        <span class="notice">
+
+        반가워요 :)
+        </span>
+        </p>
+      </div>
+      
+    </div>
+  </div>
+
+<!-- 사이드 메뉴시작 -->
+  <nav class="sidebar-nav">
+    
+      
+      
+      
+
+      
+      <!-- 사이드바 대분류 -->
+      <span class="foldable">
+        <a class="sidebar-nav-item " href="/">
+          Categories
+        </a>
+
+        
+          
+            
+            
+            
+            <!-- 사이드바 카테고리 소분류  -->
+
+              <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#til">
+                
+                TIL (Today I Learned) -
+                  
+                  
+                  4
+              </a>
+          
+        
+          
+            
+            
+            
+            <!-- 사이드바 카테고리 소분류  -->
+
+              <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#알고리즘">
+                
+                알고리즘 -
+                  
+                  
+                  0
+              </a>
+          
+        
+      </span>
+
+    
+      
+      
+      
+
+      
+      <!-- 사이드바 대분류 -->
+      <span class="">
+        <a class="sidebar-nav-item " href="/blog/tags/">
+          Tags
+        </a>
+
+        
+      </span>
+
+    
+      
+      
+      
+
+      
+      <!-- 사이드바 대분류 -->
+      <span class="">
+        <a class="sidebar-nav-item " href="/about/">
+          About
+        </a>
+
+        
+      </span>
+
+    
+
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead nav-down">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="개발 기록장">
+              <!-- <img class="masthead-logo" src=""/> -->
+              <img class="masthead-logo" src="/assets/images/pngwing.png" />
+
+              <small id="blog-title">개발 공부 일지</small>
+            </a>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content"><div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/terminal/2021-11-04/path/">
+        터미널에 환경변수(PATH) 추가하기
+      </a>
+    </h1>
+
+    <span class="post-date">04 Nov 2021</span>
+     |
+    
+    <a href="/blog/tags/#terminal" class="post-tag">Terminal</a>
+    
+    <a href="/blog/tags/#zsh" class="post-tag">Zsh</a>
+    
+    <a href="/blog/tags/#환경변수" class="post-tag">환경변수</a>
+    
+    
+
+    <article>
+      <p><br />
+<br /></p>
+
+<h1 id="환경변수path-란">환경변수(PATH) 란?</h1>
+
+<p>맥 운영체제에서 터미널을 사용해 프로그램을 설치할 때 <strong>PATH</strong> 를 추가하기 위한 작업을 해왔습니다.<br />
+이때까지 그냥 하라는 대로 입력만 하다보니 자세한 내용을 알지 못했는데 이번에 블로그를 만들며 Ruby 를 설치하다가 궁금증이 생겨 한 번 알아보았습니다.</p>
+
+<p>맥 운영체제를 사용하고 있을 때 터미널에서 작업을 해야하는 경우 프로그램을 실행할 때마다 항상 경로를 포함해서 적어주어야 합니다. (몰랐습니다..ㅎ)</p>
+
+<p>그런데 <strong>환경변수(PATH)</strong> 를 추가하면 매번 실행파일의 경로까지 일일이 적을 필요가 없어집니다.</p>
+
+<p>이제 환경변수를 추가해 보겠습니다.</p>
+
+<p><br /></p>
+
+<h1 id="환경변수-추가하기">환경변수 추가하기</h1>
+
+<h2 id="1-터미널을-실행한-뒤-홈-경로로-이동">1. 터미널을 실행한 뒤 홈 경로로 이동</h2>
+
+<p>보통 터미널을 실행하면 홈 경로이지만 아니신 분들은 <code class="language-plaintext highlighter-rouge">cd ~</code> 명령을 입력하면 홈경로로 이동할 수 있습니다.</p>
+
+<p><img width="564" alt="스크린샷 2021-11-04 오후 12 41 54" src="https://user-images.githubusercontent.com/87692499/140254390-bb477754-438d-4111-aeab-2e49b9cd20c7.png" /></p>
+
+<h2 id="2-사용중인-쉘-알아보기">2. 사용중인 쉘 알아보기</h2>
+
+<p>터미널에 <code class="language-plaintext highlighter-rouge">echo $SHELL</code> 을 입력해보고 결과가 Bash 이면 <strong>bash 쉘</strong>, bin/zsh 이면 <strong>zsh 쉘</strong> 입니다.</p>
+
+<p>bash 쉘은 ~/.bash_profile 이나 ~/.bashrc 를 수정하면 되고<br />
+zsh 쉘은 ~/.zshrc 파일을 수정하면 됩니다!</p>
+
+<p><br /></p>
+
+<h2 id="3-환경변수-추가하기">3. 환경변수 추가하기</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi ~/.zshrc
+</code></pre></div></div>
+
+<p>명령으로 .zshrc 파일을 수정할 수 있습니다.</p>
+
+<p class="notice--info">vi 를 사용해 본 적이 없으신 분들은 VS Code 를 사용하신다면 <code class="language-plaintext highlighter-rouge">code ~/.zshrc</code> 명령을 사용하시면 VS Code 에서 쉽게 편집이 가능합니다!</p>
+
+<p><img width="1167" alt="스크린샷 2021-11-04 오후 1 36 28" src="https://user-images.githubusercontent.com/87692499/140258741-dc9f142b-a8e8-4ba9-8593-24efda87770b.png" /></p>
+
+<p>.zshrc 파일을 열어보면 이렇게 주석이 많이 보일텐데요~ 맨 아랫부분에</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH="$PATH: ~/DOWNLOADS/flutter/bin"
+</code></pre></div></div>
+
+<p>를 추가해주면 됩니다!</p>
+
+<p class="notice">위 코드는 예시이고 <code class="language-plaintext highlighter-rouge">$PATH:</code> 오른쪽에 추가할 경로를 적어주면 됩니다.</p>
+
+<p><br /></p>
+
+<h2 id="4-설정-적용하기">4. 설정 적용하기</h2>
+
+<p>터미널을 껏다 켜도 적용이 되지만 바로 적용해봅시다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source ~/.zshrc
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>이제 환경변수 편집이 끝났습니다!<br />
+환경변수가 제대로 편집되었는지 확인해 봅시다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo $PATH
+</code></pre></div></div>
+
+<p>출력되는 값 맨 마지막에 입력한 경로가 있으면 끝!</p>
+
+    <article>
+    <div class="post-more">
+      
+      <a href="/terminal/2021-11-04/path/#disqus_thread"> <i class="fa fa-comments" aria-hidden="true"></i>Comment</a>&nbsp;
+      
+      <a href="/terminal/2021-11-04/path/"><i class="fa fa-plus-circle" aria-hidden="true"></i>Read more</a>
+    </div>
+  </div>
+  
+</div>
+
+<div class="pagination">
+  
+    <span class="pagination-item older">Older</span>
+  
+  
+    
+      <a class="pagination-item newer" href="/blog/page2">Newer</a>
+    
+  
+</div>
+</div>
+    </div>
+    <!-- search bar -->
+
+    <!-- <a href="/search/" class="search">
+      <i class="fa fa-search" aria-hidden="true"></i>
+    </a> -->
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener(
+          'click',
+          function (e) {
+            var target = e.target;
+
+            if (target === toggle) {
+              checkbox.checked = !checkbox.checked;
+              e.preventDefault();
+            } else if (checkbox.checked && !sidebar.contains(target)) {
+              /* click outside the sidebar when sidebar is open */
+              checkbox.checked = false;
+            }
+          },
+          false
+        );
+      })(document);
+    </script>
+    
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        'script',
+        'https://www.google-analytics.com/analytics.js',
+        'ga'
+      );
+
+      ga('create', '', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    <script
+      id="dsq-count-scr"
+      src="//wayhome25-github-io.disqus.com/count.js"
+      async
+    ></script>
+  </body>
+  
+  <script
+    id="dsq-count-scr"
+    src="//.disqus.com/count.js"
+    async
+  ></script>
+  
+
+  <script type="text/javascript">
+    // Hide Header on on scroll down
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = $('.masthead').outerHeight();
+
+    $(window).scroll(function (event) {
+      didScroll = true;
+    });
+
+    setInterval(function () {
+      if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+      }
+    }, 250);
+
+    function hasScrolled() {
+      var st = $(this).scrollTop();
+
+      // Make sure they scroll more than delta
+      if (Math.abs(lastScrollTop - st) <= delta) return;
+
+      // If they scrolled down and are past the navbar, add class .nav-up.
+      // This is necessary so you never see what is "behind" the navbar.
+      if (st > lastScrollTop && st > navbarHeight) {
+        // Scroll Down
+        $('.masthead').removeClass('nav-down').addClass('nav-up');
+      } else {
+        // Scroll Up
+        if (st + $(window).height() < $(document).height()) {
+          $('.masthead').removeClass('nav-up').addClass('nav-down');
+        }
+      }
+
+      lastScrollTop = st;
+    }
+  </script>
+</html>
