@@ -6,7 +6,7 @@ categories:
   - JavaScript
 
 tags:
-  - [WeCode, WeStudy, Array, JavaScript]
+  - [Array, JavaScript]
 
 permalink: /:title/
 
