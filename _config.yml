@@ -40,7 +40,7 @@ nav:
     # - { Categories All: '/blog/categories/' }
     - { TIL: '/blog/categories/#til' }
     - { 알고리즘: '/blog/categories/#알고리즘' }
-    - { HTML-CSS: /blog/categories/#html-css}
+    - { HTML CSS: /blog/categories/#html-css}
     - { JavaScript: /blog/categories/#javascript}
   Tags:
     - '/blog/tags/'
