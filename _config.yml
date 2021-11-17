@@ -40,6 +40,9 @@ nav:
     # - { Categories All: '/blog/categories/' }
     - { TIL (Today I Learned): '/blog/categories/#til' }
     - { 알고리즘: '/blog/categories/#알고리즘' }
+    - { Terminal: /blog/categories/#terminal}
+    - { HTML-CSS: /blog/categories/#html-css}
+    - { JavaScript: /blog/categories/#javascript}
   Tags:
     - '/blog/tags/'
   About:
