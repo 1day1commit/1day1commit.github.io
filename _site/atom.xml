@@ -4,13 +4,39 @@
  <title>개발 기록장</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2021-11-18T04:00:06+09:00</updated>
+ <updated>2021-11-18T21:06:02+09:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>TAEYEONG JEONG</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>TIL-05</title>
+   <link href="http://localhost:4000/til-05/"/>
+   <updated>2021-11-18T13:53:41+09:00</updated>
+   <id>http://localhost:4000/til-05</id>
+   <content type="html">&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;오늘-할-것-계획&quot;&gt;오늘 할 것 (계획)&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[WeCode] JavaScript Replit 끝까지 풀기&lt;/li&gt;
+  &lt;li&gt;[WeCode] 웹 서비스의 역사와 발전 공부하기&lt;/li&gt;
+  &lt;li&gt;[WeCode] HTML/CSS/JavaScript 그룹 면접 준비&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;오늘-한-일-회고&quot;&gt;오늘 한 일 (회고)&lt;/h1&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;내일-할-것&quot;&gt;내일 할 것&lt;/h1&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Javascript Array 메서드 정리</title>

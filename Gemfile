@@ -19,6 +19,7 @@ gem "jekyll-feed"
 gem "jemoji"
 gem "jekyll-include-cache"
 gem "jekyll-algolia"
+gem "jekyll-toc"
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo'
