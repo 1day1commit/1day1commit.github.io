@@ -384,7 +384,7 @@
 
       var current = headerNodes.filter(function (header) {
         var headerY = window.pageYOffset + header.getBoundingClientRect().top;
-        return window.scrollY >= headerY - 120;
+        return window.scrollY >= headerY - 60;
       });
 
       if (current.length > 0) {
