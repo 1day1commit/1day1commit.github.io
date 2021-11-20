@@ -22,7 +22,7 @@ last_modified_at: 2021-11-03
 # 1. 폴더 생성하기
 
 github.io 폴더 > \_posts 폴더
-{: .notice--info}
+{: .notice}
 
 <img width="784" alt="" src="https://user-images.githubusercontent.com/87692499/140019386-548452f8-0bb5-405e-bc81-cf46a88955b1.png">
 
@@ -145,7 +145,7 @@ Visual Studio Code 를 사용하시는 분들은 동그라미 친 부분을 누�
 
 `bundle exec jekyll serve` 대신 `bundle exec jekyll serve --livereload` 명령어를 실행시키면 파일을 저장할 때마다 자동으로 페이지에 반영됩니다. 저는 이렇게 사용하는데 편하신대로 사용하시면 됩니다!  
 반영이 잘 안되는 경우에는 control + c 로 로컬 서버를 종료하고 다시 실행시켜주시면 됩니다.
-{: .notice--info}
+{: .notice}
 
 <br>
 

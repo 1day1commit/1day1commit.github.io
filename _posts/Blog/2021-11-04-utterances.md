@@ -66,7 +66,7 @@ disqus 는 무겁고 광고가 많이 달린다는 단점이 있다고 합니다
 버튼을 누르고 Select repositories 에서 댓글 알림을 issue 로 관리할 저장소를 선택해주시면 됩니다!
 
 저같은 경우에는 comments repository 입니다.
-{: .notice--info}
+{: .notice}
 
 <br>
 
