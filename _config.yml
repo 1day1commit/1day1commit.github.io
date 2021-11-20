@@ -48,8 +48,8 @@ nav:
     - '/blog/tags/'
   About:
     - '/about/'
-  Github Blog:
-    - https://1day1commit.github.io/
+  Search:
+    - /search/
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
