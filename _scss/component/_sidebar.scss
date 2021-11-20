@@ -21,10 +21,10 @@
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: .875rem; /* 15px */
-  color: rgba(255,255,255,.6);
-  @include transition(all .3s ease-in-out);
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-size: 0.875rem; /* 15px */
+  color: rgba(255, 255, 255, 0.6);
+  @include transition(all 0.3s ease-in-out);
 
   @if $reverse-layout {
     left: auto;
@@ -42,7 +42,7 @@
 }
 @media (min-width: 30em) {
   .sidebar {
-    font-size: .8rem; /* 14px */
+    font-size: 0.8rem; /* 14px */
   }
 }
 
@@ -60,16 +60,16 @@
 
 /* Sidebar nav */
 .sidebar-nav {
-  border-bottom: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .sidebar-nav-item {
   display: block;
-  padding: .5rem 1rem;
-  border-top: 1px solid rgba(255,255,255,.1);
+  padding: 0.5rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 .sidebar-nav-item-sub {
   &:before {
-    content: "";
+    content: '';
     padding-left: 1em;
   }
   font-size: 85%;
@@ -79,7 +79,7 @@
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: none;
-  background-color: rgba(255,255,255,.1);
+  background-color: rgba(255, 255, 255, 0.1);
   border-color: transparent;
 }
 
@@ -88,7 +88,7 @@ a.sidebar-nav-item:focus {
     padding: 1.5rem;
   }
   .sidebar-nav-item {
-    padding-left:  1.5rem;
+    padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 }
@@ -103,7 +103,7 @@ a.sidebar-nav-item:focus {
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
 .sidebar-toggle {
   position: absolute;
-  top:  1.1rem;
+  top: 1.1rem;
   @if $reverse-layout {
     left: auto;
     right: 1rem;
@@ -112,19 +112,33 @@ a.sidebar-nav-item:focus {
     right: auto;
   }
   display: block;
-  padding: .25rem .75rem;
+  padding: 0.25rem 0.75rem;
   color: $theme-color;
   background-color: $white;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   cursor: pointer;
 }
 
 .sidebar-toggle:before {
   display: inline-block;
   width: 1rem;
-  height: .75rem;
-  content: "";
-  @include background-image(linear-gradient(to bottom, $theme-color-dark, $theme-color-dark 20%, $white 20%, $white 40%, $theme-color-dark 40%, $theme-color-dark 60%, $white 60%, $white 80%, $theme-color-dark 80%, $theme-color-dark 100%));
+  height: 0.75rem;
+  content: '';
+  @include background-image(
+    linear-gradient(
+      to bottom,
+      $theme-color-dark,
+      $theme-color-dark 20%,
+      $white 20%,
+      $white 40%,
+      $theme-color-dark 40%,
+      $theme-color-dark 60%,
+      $white 60%,
+      $white 80%,
+      $theme-color-dark 80%,
+      $theme-color-dark 100%
+    )
+  );
 }
 
 .sidebar-toggle:active,
@@ -137,15 +151,29 @@ a.sidebar-nav-item:focus {
 .sidebar-toggle:active:before,
 #sidebar-checkbox:focus ~ .sidebar-toggle:before,
 #sidebar-checkbox:checked ~ .sidebar-toggle:before {
-  @include background-image(linear-gradient(to bottom, $white, $white 20%, $theme-color-dark 20%, $theme-color-dark 40%, $white 40%, $white 60%, $theme-color-dark 60%, $theme-color-dark 80%, $white 80%, $white 100%));
+  @include background-image(
+    linear-gradient(
+      to bottom,
+      $white,
+      $white 20%,
+      $theme-color-dark 20%,
+      $theme-color-dark 40%,
+      $white 40%,
+      $white 60%,
+      $theme-color-dark 60%,
+      $theme-color-dark 80%,
+      $white 80%,
+      $white 100%
+    )
+  );
 }
 
 @media (min-width: 30.1em) {
-  .sidebar-toggle, .search {
+  .sidebar-toggle,
+  .search {
     position: fixed;
   }
 }
-
 
 @media print {
   .sidebar-toggle {
@@ -173,7 +201,7 @@ a.sidebar-nav-item:focus {
 }
 .wrap,
 .sidebar-toggle {
-  @include transition(transform .3s ease-in-out);
+  @include transition(transform 0.3s ease-in-out);
 }
 
 #sidebar-checkbox:checked + .sidebar {
@@ -182,37 +210,111 @@ a.sidebar-nav-item:focus {
 }
 
 #sidebar-checkbox:checked ~ .wrap {
-  @include transform(translateX(if($overlay-sidebar,0,if($reverse-layout, -14rem, 14rem))));
+  @include transform(
+    translateX(if($overlay-sidebar, 0, if($reverse-layout, -14rem, 14rem)))
+  );
 }
 
 #sidebar-checkbox:checked ~ .sidebar {
   @include transform(translateX(if($reverse-layout, -14rem, 14rem)));
   @if $overlay-sidebar {
-    box-shadow: .25rem 0 .5rem rgba(0,0,0,.1);
-    @if $reverse-layout { box-shadow: -.25rem 0 .5rem rgba(0,0,0,.2); }
+    box-shadow: 0.25rem 0 0.5rem rgba(0, 0, 0, 0.1);
+    @if $reverse-layout {
+      box-shadow: -0.25rem 0 0.5rem rgba(0, 0, 0, 0.2);
+    }
   }
 }
 
 #sidebar-checkbox:checked ~ .sidebar-toggle {
   @include transform(translateX(if($reverse-layout, -14rem, 14rem)));
   @if $overlay-sidebar {
-    box-shadow: 0 0 0 .25rem $white;
+    box-shadow: 0 0 0 0.25rem $white;
   }
 }
 
 .sidebar-personal-info {
   .sidebar-personal-info-section {
     &:not(:first-of-type) {
-      margin-top: .75rem;
+      margin-top: 0.75rem;
     }
     line-height: 1rem;
-    a, strong {
+    a,
+    strong {
       color: $white;
       text-decoration: none;
     }
   }
 }
 
-.notice{
-    font-size: 0.6rem !important;
+$notice-color: #d8ebf1 !default;
+$notice-background-mix: 80% !default;
+$text-color: #000;
+$background-color: #d8ebf1;
+$border-radius: 4px;
+$code-notice-background-mix: 90% !default;
+
+.notice {
+  margin: 2em 0 !important; /* override*/
+  padding: 1em;
+  color: $text-color;
+  font-family: $font-sans;
+  font-size: 0.85em !important;
+  text-indent: initial; /* override*/
+  background-color: mix(
+    $background-color,
+    $notice-color,
+    $notice-background-mix
+  );
+  border-radius: $border-radius;
+  box-shadow: 0 1px 1px rgba($notice-color, 0.25);
+
+  h4 {
+    margin-top: 0 !important; /* override*/
+    margin-bottom: 0.75em;
+    line-height: inherit;
+  }
+
+  @at-root .page__content #{&} h4 {
+    /* using at-root to override .page-content h4 font size*/
+    margin-bottom: 0;
+    font-size: 1em;
+  }
+
+  p {
+    &:last-child {
+      margin-bottom: 0 !important; /* override*/
+    }
+  }
+
+  h4 + p {
+    /* remove space above paragraphs that appear directly after notice headline*/
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  a {
+    // color: mix(#000, $notice-color, 10%);
+
+    &:hover {
+      color: mix(#000, $notice-color, 50%);
+    }
+  }
+
+  code {
+    background-color: #ebf5f8;
+  }
+
+  pre code {
+    background-color: inherit;
+  }
+
+  ul {
+    &:last-child {
+      margin-bottom: 0; /* override*/
+    }
+  }
+}
+
+.notice--info {
+  font-size: 1rem !important;
 }
