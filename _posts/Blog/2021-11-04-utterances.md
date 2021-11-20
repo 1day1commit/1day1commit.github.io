@@ -8,6 +8,8 @@ categories:
 tags:
   - [Github Blog, Jekyll, Minimal Mistakes, Utterances]
 
+toc: true
+
 permalink: /:title/
 
 date: 2021-11-04

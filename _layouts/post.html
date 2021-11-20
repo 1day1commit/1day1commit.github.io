@@ -14,11 +14,12 @@ layout: default
   >
   {% endfor %} {% endif %}
   <article class="post-article">
+    {% if page.toc %}
     <div class="toc">
       <a href="#">맨 위로</a>
       {% include toc.html html=content %}
     </div>
-    {{ content }}
+    {% endif %} {{ content }}
   </article>
 </div>
 

@@ -8,6 +8,8 @@ categories:
 tags:
   - [Jekyll, Github Blog, Minimal Mistakes, Blog Posting]
 
+toc: true
+
 permalink: /:title/
 
 date: 2021-11-03
