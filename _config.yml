@@ -38,10 +38,12 @@ nav:
   Categories:
     - '/'
     # - { Categories All: '/blog/categories/' }
-    - { TIL: '/blog/categories/#til' }
-    - { 알고리즘: '/blog/categories/#알고리즘' }
-    - { HTML CSS: /blog/categories/#html-css}
-    - { JavaScript: /blog/categories/#javascript}
+    - { TIL: '/categories/til/' }
+    - { 알고리즘: '/categories/algorithm' }
+    - { HTML CSS: /categories/html-css}
+    - { JavaScript: /categories/javascript}
+    - { WeCode: /categories/wecode}
+    
   Tags:
     - '/blog/tags/'
   About:
