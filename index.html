@@ -3,6 +3,10 @@ layout: default
 title: Home
 ---
 
+{% assign categories_max = 0 %} {% for category in site.categories %} {% if
+category[1].size > categories_max %} {% assign categories_max = category[1].size
+%} {% endif %} {% endfor %}
+
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -24,9 +28,12 @@ title: Home
   <body>
     <div class="tags-expo">
       <div class="tags-expo-list">
-        {% for tag in site.categories %}
-        <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
-        {% endfor %}
+        {% for i in (1..categories_max) reversed %} {% for category in
+        site.categories %} {% if category[1].size == i %}
+        <a href="#{{ category[0] | slugify }}" class="post-tag"
+          >{{ category[0] }}</a
+        >
+        {% endif %} {% endfor %} {% endfor %}
       </div>
       <hr />
 
@@ -43,12 +50,13 @@ title: Home
           {% endfor %}
         </ul>
 
-        {% for tag in site.categories %}
+        {% for i in (1..categories_max) reversed %} {% for category in
+        site.categories %} {% if category[1].size == i %}
         <a class="category-title"
-          ><h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2></a
+          ><h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2></a
         >
         <ul class="tags-expo-posts">
-          {% for post in tag[1] %}
+          {% for post in category[1] %}
           <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
             <li>
               {{ post.title }}
@@ -57,7 +65,7 @@ title: Home
           </a>
           {% endfor %}
         </ul>
-        {% endfor %}
+        {% endif %}{% endfor %}{% endfor %}
       </div>
     </div>
 
