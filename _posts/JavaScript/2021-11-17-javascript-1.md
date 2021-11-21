@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 'Javascript Array 메서드 정리'
+title: 'JavaScript Array 메서드 정리'
 
 categories:
   - JavaScript
 
 tags:
-  - [Array, JavaScript]
+  - [Array]
 
 toc: true
 

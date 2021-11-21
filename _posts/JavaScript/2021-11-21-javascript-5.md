@@ -1,0 +1,71 @@
+---
+layout: post
+title: 'JavaScript Math 객체'
+
+categories:
+  - JavaScript
+
+tags:
+  - [Math 객체]
+
+toc: true
+
+permalink: /:title/
+
+date: 2021-11-21T21:40:27+0900
+last_modified_at: 2021-11-21T21:40:27+0900
+---
+
+<br>
+<br>
+
+# Number
+
+같은 프론트엔드 개발자여도 어느 분야에서 일 하느냐에 따라 주로 사용하는 함수가 달라집니다.
+
+어떤 프로젝트를 하더라도 기본적인 event, String, Number 관련 함수들은 자주 사용하게 됩니다.
+
+JavaScript 에서 제공하는 Math 객체를 사용해 수학 계산을 할 수 있습니다.
+
+절댓값 구하기, sin, cos, 제곰근 등등 많은 메서드가 있습니다. [Math 객체](https://www.w3schools.com/js/js_math.asp){:target="\_blank"}
+
+자주 사용하는 3개의 메서드를 알아보겠습니다.
+
+## round(), ceil(), floor()
+
+`round()` 는 반올림 메서드입니다.
+
+`ceil()` 은 올림 메서드입니다.
+
+`floor()` 는 내림 메서드입니다.
+
+세 메서드 모두 정수를 리턴해주는데요, 소수점 아래에서 결과를 얻고싶다면
+
+```javascript
+const ceil = Math.ceil(1.222); // 2
+const ceil1 = Math.ceil(1.222 * 10) / 10; // 1.3
+```
+
+이런식으로 사용하면 됩니다.
+
+<br>
+
+## 랜덤함수
+
+```javascript
+const randomNumber = Math.random();
+console.log(randomNumber);
+```
+
+`Math.random()` 메서드를 사용하면 0.0000000000000000에서 0.9999999999999999 사이의 값에서 랜덤수를 얻을 수 있습니다.
+
+<br>
+
+```javascript
+const randomNumber = Math.random();
+console.log(Math.floor(randomNumber * 10));
+```
+
+이런식으로 10을 곱해준 후 소숫점 아래는 다 버려 0~10 사이의 랜덤수를 구할수도 있습니다.
+
+랜덤함수는 로또를 뽑거나 이벤트 당첨자를 뽑을 때 유용하게 사용됩니다.

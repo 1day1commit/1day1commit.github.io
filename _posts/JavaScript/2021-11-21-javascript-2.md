@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 'JavaScript Replit 정리'
+title: 'JavaScript String'
 
 categories:
   - JavaScript
 
 tags:
-  - [JavaScript]
+  - [String]
 
 toc: true
 
@@ -62,15 +62,3 @@ console.log(info);
 ```
 
 위 코드는 '안녕하시요' 라는 오타를 '안녕하세요' 라고 바꿔주는 코드입니다.
-
-<br>
-
-# 날짜와 시간
-
-프론트엔드 개발을 하다보면 날짜와 시간을 다루는 경우가 많습니다.
-
-- 회원가입을 한 날짜와 시간
-- 글을 작성한 시간
-- 휴대폰의 현재 시간
-
-등...

@@ -1,0 +1,103 @@
+---
+layout: post
+title: 'JavaScript Class'
+
+categories:
+  - JavaScript
+
+tags:
+  - [Class]
+
+toc: true
+
+permalink: /:title/
+
+date: 2021-11-21T21:43:29+0900
+last_modified_at: 2021-11-21T21:43:29+0900
+---
+
+<br>
+<br>
+
+# Class
+
+클래스는 **객체지향 프로그래밍** 의 핵심입니다.
+
+객체지향 프로그래밍이란, 프로그램을 객체들로 구성하고 객체들 간에 서로 상호작용 하도록 작성하는 방법입니다.
+
+**프로그래밍에 있어서 Class, 객체, 객체지향은 항상 중요한 주제입니다.**
+
+'객체지향 프로그래밍' 이라는 단어에서 '객체'는 데이터 타입을 말하는 것이 아닙니다.
+
+하지만 클래스는 결국 객체 데이터 타입을 잘 설계하기 위한 틀입니다. 이때의 객체는 특정 로직을 가지고 있는 행동(method)와 변경 가능한 상태(멤버 변수)를 가집니다.
+
+원하는 구조의 객체 틀을 짜놓고, 비슷한 모양의 객체를 공장처럼 찍어낼 수 있습니다.
+
+큰 규모의 객체이거나 비슷한 모양의 객체를 계속 만들어야 한다면 매번 만들어서 사용하는 것보다 **Class** 라는 설계도를 통해 만드는 것이 좋습니다.
+
+## this
+
+사람을 객체로 정의해보겠습니다.
+
+`person` 이라는 객체는 4개의 프로퍼티를 가지고 있습니다.
+
+- `name`
+- `age`
+- `getName`
+- `getAge`
+
+```javascript
+const person = {
+  name: 'TaeYeong',
+  age: 27,
+  getName: function () {
+    return this.name;
+  },
+  getAge: function () {
+    return this.age;
+  },
+};
+```
+
+여기서 `this` 는 객체 내부에서 해당 객체의 프로퍼티에 접근할 때 사용하는 키워드입니다.
+
+<br>
+
+## Constructor(생성자)
+
+객체와 설계도인 클래스는 문법이 비슷한데요, 가장 큰 차이점은 `constructor` 라는 생성자 함수입니다.
+
+<br>
+
+아래와 같이 클래스로 객체를 생성하는 과정을 '인스턴스화'라고 부릅니다.
+
+```javascript
+const morning = new Car('Morning', 2000000);
+```
+
+클래스를 통해 생성된 객체를 **인스턴스(instance)** 라고 부릅니다.
+
+클래스는 새로운 인스턴스를 생성할 때마다 `constructor()` 메서드를 호출합니다.
+
+```javascript
+class Car {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+}
+```
+
+- `Car` 는 클래스 이름입니다. 항상 대문자로 시작하고 PascalCase 로 작성해야 합니다.
+- Car 클래스 의 인스턴스 를 생성할때마다 `constructor()` 메서드가 호출됩니다.
+- `constructor()` 메서드는 name, price 2개의 argument(인자)를 받습니다.
+- `constructor()` 메서드에 `this` 키워드를 사용했습니다. 클래스의 실행범위(context)에서 `this` 는 해당 인스턴스 를 의미합니다.
+- `constructor()` 에서 인자로 넘어오는 name 과 price 를 사용해 Car 인스턴스의 name, price 프로퍼티에 값을 할당합니다.
+- 이렇게 클래스 내에서 name, price 와 같이 변경 가능한 값이자 클래스 내의 어느곳에서나 사용할 수 있는 변수를 **멤버 변수** 라고 부릅니다.
+- 멤버 변수는 `this` 키워드로 접근합니다.
+
+<br>
+
+## 인스턴스(instance)
+
+인스턴스는 클래스를 통해 생성된 객체입니다.

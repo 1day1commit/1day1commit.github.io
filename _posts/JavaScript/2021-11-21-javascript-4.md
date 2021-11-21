@@ -1,0 +1,87 @@
+---
+layout: post
+title: 'JavaScript Date 객체'
+
+categories:
+  - JavaScript
+
+tags:
+  - [Date 객체]
+
+toc: true
+
+permalink: /:title/
+
+date: 2021-11-21T21:39:35+0900
+last_modified_at: 2021-11-21T21:39:35+0900
+---
+
+<br>
+<br>
+
+# 날짜와 시간
+
+## 날짜 객체
+
+프론트엔드 개발을 하다보면 날짜와 시간을 다루는 경우가 많습니다.
+
+- 회원가입을 한 날짜와 시간
+- 글을 작성한 시간
+- 휴대폰의 현재 시간
+
+등...
+
+날짜와 시간을 저장하고 보여줄 때는 **날짜 객체** 를 사용합니다.
+
+날짜 객체를 생성할 때는 다음과 같이 `new` 연산자 다음에 `Date` 생성자를 사용합니다.
+
+```javascript
+var rightNow = new Date();
+console.log(rightNow);
+```
+
+```javascript
+2019-02-18T00:45:06.562Z
+```
+
+이런식으로 이상한 형식으로 출력되는데요, 이것을 가지고 원하는 형식으로 바꾸어주어야 합니다.
+
+```javascript
+let rightNow = new Date();
+let year = rightNow.getFullYear();
+let month = rightNow.getMonth() + 1;
+let date = rightNow.getDate();
+let day = rightNow.getDay();
+let currentHour = rightNow.getHours();
+let currentMin = rightNow.getMinutes();
+```
+
+`getMonth()` 메서드는 특이하게 현재 달보다 1 작은 값을 반환합니다. 꼭 1을 더해 사용해야 합니다!
+{: .notice}
+
+<br>
+
+## getTime()
+
+```javascript
+let rightNow = new Date();
+let time = rightNow.getTime();
+```
+
+`getTime()` 메서드는 날짜의 밀리초 표현을 반환합니다.
+
+1970년 1월 1일을 기준으로 몇 밀리초가 지났는지 알려줍니다.
+
+`getTime()` 메서드로 반환된 숫자를 비교연산 해 언제가 더 과거인지 판단할 수 있습니다.
+
+<br>
+
+## 특정 날짜의 Date
+
+```javascript
+let date1 = new Date('November 21, 2021 20:39:00');
+let date2 = new Date('2021-11-21T20:39:00');
+let date3 = new Date(2021, 11, 21);
+```
+
+이런식으로 특정 날짜를 매개변수로 넘겨주면 해당 날짜의 Date 객체를 받을 수 있습니다.
