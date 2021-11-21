@@ -45,7 +45,7 @@ nav:
     - { WeCode: /categories/wecode}
     
   Tags:
-    - '/blog/tags/'
+    - '/tag/tags/'
   About:
     - '/about/'
   Search:
