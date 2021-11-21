@@ -53,10 +53,12 @@ category[1].size > categories_max %} {% assign categories_max = category[1].size
         {% for i in (1..categories_max) reversed %} {% for category in
         site.categories %} {% if category[1].size == i %}
         <a class="category-title"
-          ><h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2></a
+          ><h2 id="{{ category[0] | slugify }}">
+            {{ category[0] }} ({{i}})
+          </h2></a
         >
         <ul class="tags-expo-posts">
-          {% for post in category[1] %}
+          {% for post in category[1] offset: 0 limit: 50 %}
           <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
             <li>
               {{ post.title }}
