@@ -6,7 +6,7 @@ categories:
   - JavaScript
 
 tags:
-  - [Math 객체]
+  - [JavaScript]
 
 toc: true
 

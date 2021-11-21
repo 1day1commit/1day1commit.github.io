@@ -6,7 +6,7 @@ categories:
   - JavaScript
 
 tags:
-  - [Scope]
+  - [JavaScript]
 
 toc: true
 

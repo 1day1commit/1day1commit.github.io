@@ -6,7 +6,7 @@ categories:
   - JavaScript
 
 tags:
-  - [Date 객체]
+  - [JavaScript]
 
 toc: true
 

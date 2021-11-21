@@ -6,7 +6,7 @@ categories:
   - Blog
 
 tags:
-  - [Jekyll, Github Blog, Minimal Mistakes, Blog Posting]
+  - [Jekyll, Github Blog, Minimal Mistakes]
 
 toc: true
 
