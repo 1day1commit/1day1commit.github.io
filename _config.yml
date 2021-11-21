@@ -1,7 +1,7 @@
 # Site Info
 title: '개발 기록장'
-tagline: '내가 보려고 만든 블로그'
-description: '공부한 것을 기록하는 공간'
+tagline: 'Today I Learned'
+description: 'TIL Github Blog'
 baseurl: ""
 url: https://1day1commit.github.io
 # logo: '/public/logo.png'
