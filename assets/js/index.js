@@ -1,5 +1,5 @@
 // 이미지 alt 속 내용을 캡션으로 만들어줌
-$('.post-article > img[alt]').replaceWith(function () {
+$('.post-article > p > img[alt]').replaceWith(function () {
   return (
     // '<figure>' +
     '<a href="' +
