@@ -37,12 +37,12 @@ author:
 nav:
   Categories:
     - '/'
-    # - { Categories All: '/blog/categories/' }
     - { TIL: '/categories/til/' }
-    - { 알고리즘: '/categories/algorithm' }
-    - { HTML CSS: /categories/html-css}
-    - { JavaScript: /categories/javascript}
-    - { WeCode: /categories/wecode}
+    - { 알고리즘: /categories/algorithm }
+    - { React: '/categories/react' }
+    - { JavaScript: /categories/javascript }
+    - { HTML CSS: /categories/html-css }
+    - { WeCode: /categories/wecode }
     
   Tags:
     - '/tags/'
