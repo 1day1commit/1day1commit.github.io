@@ -27,6 +27,9 @@
 
 /* Error */
 .highlight .k {
+  // color: #0359ae;
+  // color: #747ba9;
+  color: #85b8cb;
   font-weight: bold;
 }
 
@@ -131,8 +134,9 @@
 
 /* Keyword.Constant */
 .highlight .kd {
-  font-weight: bold;
   color: #85b8cb;
+  font-weight: bold;
+  
 }
 
 /* Keyword.Declaration */
