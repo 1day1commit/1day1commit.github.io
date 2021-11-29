@@ -116,6 +116,11 @@
     max-height: 670px;
     display: block;
   }
+  @media (min-width: 105em) {
+    width: 360px;
+    max-height: 710px;
+    display: block;
+  }
 
   a.toc-active {
     font-weight: bold;
