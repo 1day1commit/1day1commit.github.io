@@ -12,7 +12,7 @@ gems:
 markdown: kramdown
 kramdown:
   input: GFM
-  syntax_highligher: rouge
+  syntax_highligther: rouge
 excerpt_separator: "<!-- more -->"
 sass:
   style: compressed

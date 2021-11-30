@@ -11,11 +11,13 @@
 
 /* refer to https://github.com/spoqa/spoqa.github.com/blob/master/css/syntax.css */
 .highlight {
-  background: #f8f9fa;
+  // background: #f8f9fa;
+  background: #363B45;
+  color: #fff;
 }
 
 .highlight .c {
-  color: #999988;
+  color: #ffc2c3;
   font-style: italic;
 }
 
@@ -29,16 +31,22 @@
 .highlight .k {
   // color: #0359ae;
   // color: #747ba9;
-  color: #85b8cb;
+  color: #C5A5C5;
   font-weight: bold;
 }
 
 /* Keyword */
 .highlight .o {
+  color: #b2d6ca;
   font-weight: bold;
 }
 
 /* Operator */
+
+.highlight .p {
+  color: #86C4BC;
+}
+
 .highlight .cm {
   color: #999988;
   font-style: italic;
@@ -52,7 +60,7 @@
 
 /* Comment.Preproc */
 .highlight .c1 {
-  color: #999988;
+  color: #ffc2c3;
   font-style: italic;
 }
 
@@ -129,12 +137,14 @@
 
 /* Generic.Traceback */
 .highlight .kc {
+  color: #FB8950;
   font-weight: bold;
 }
 
 /* Keyword.Constant */
 .highlight .kd {
-  color: #85b8cb;
+  // color: #85b8cb;
+  color: #C5A5C5;
   font-weight: bold;
   
 }
@@ -162,22 +172,22 @@
 
 /* Literal.Number */
 .highlight .s {
-  color: #d14;
+  color: #89C18D;
 }
 
 /* Literal.String */
 .highlight .na {
-  color: #008080;
+  color: #ead6bd;
 }
 
 /* Name.Attribute */
 .highlight .nb {
-  color: #0086b3;
+  color: #E0B45D;
 }
 
 /* Name.Builtin */
 .highlight .nc {
-  color: #445588;
+  color: #E0B45D;
   font-weight: bold;
 }
 
@@ -211,7 +221,7 @@
 
 /* Name.Namespace */
 .highlight .nt {
-  color: #000080;
+  color: #FC929E;
 }
 
 /* Name.Tag */
@@ -241,7 +251,7 @@
 
 /* Literal.Number.Hex */
 .highlight .mi {
-  color: #009999;
+  color: #79B6F2;
 }
 
 /* Literal.Number.Integer */
@@ -271,7 +281,8 @@
 
 /* Literal.String.Double */
 .highlight .se {
-  color: #d14;
+  // color: #76AAA5;
+  color: #fff;
 }
 
 /* Literal.String.Escape */
@@ -281,7 +292,7 @@
 
 /* Literal.String.Heredoc */
 .highlight .si {
-  color: #d14;
+  color: #86C4BC;
 }
 
 /* Literal.String.Interpol */
@@ -291,12 +302,13 @@
 
 /* Literal.String.Other */
 .highlight .sr {
-  color: #009926;
+  // color: #fc929e;
+  color: #fff;
 }
 
 /* Literal.String.Regex */
 .highlight .s1 {
-  color: #d14;
+  color: #FC929E;
 }
 
 /* Literal.String.Single */
