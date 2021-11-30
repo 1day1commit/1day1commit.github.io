@@ -23,8 +23,8 @@
 
 /* Comment */
 .highlight .err {
-  color: #a61717;
-  background-color: #e3d2d2;
+  color: #ffc2c3;
+  font-style: italic;
 }
 
 /* Error */
@@ -276,7 +276,8 @@
 
 /* Literal.String.Doc */
 .highlight .s2 {
-  color: #d14;
+  // color: #498eaf;
+  color: #FC929E;
 }
 
 /* Literal.String.Double */
