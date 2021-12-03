@@ -88,7 +88,7 @@
   position: absolute;
   right: 0px;
   width: 240px;
-  max-height: 550px;
+  max-height: 65vh;
   color: $default;
   overflow-y: auto;
   overflow-x: hidden;
@@ -101,24 +101,24 @@
   border-left: 2px solid #e0d9e7;
 
   display: none;
-  @media (min-width: 75em) {
+  @media (min-width: 80em) {
     width: 240px;
-    max-height: 590px;
+    // max-height: 70%;
     display: block;
   }
-  @media (min-width: 85em) {
+  @media (min-width: 90em) {
     width: 300px;
-    max-height: 630px;
+    // max-height: 70%;
     display: block;
   }
-  @media (min-width: 95em) {
+  @media (min-width: 100em) {
     width: 360px;
-    max-height: 670px;
+    // max-height: 670px;
     display: block;
   }
-  @media (min-width: 105em) {
+  @media (min-width: 110em) {
     width: 360px;
-    max-height: 710px;
+    // max-height: 710px;
     display: block;
   }
 
