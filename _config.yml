@@ -36,6 +36,9 @@ author:
 
 # Navigation (2nd level links supported)
 nav:
+  전체 글:
+  - '/all-post/'
+  
   Categories:
     - '/'
     - { TIL: '/categories/til/' }
