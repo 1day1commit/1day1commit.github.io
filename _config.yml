@@ -41,7 +41,7 @@ nav:
   
   Categories:
     - '/'
-    - { TIL: '/categories/til/' }
+    - { TIL: '/categories/til' }
     - { 알고리즘: /categories/algorithm }
     - { React: '/categories/react' }
     - { JavaScript: /categories/javascript }
