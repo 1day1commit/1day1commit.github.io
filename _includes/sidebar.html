@@ -37,12 +37,11 @@
           잘못된 내용이 있으면 언제든지 댓글이나 이메일로 알려주세요~!
         </span>
         </p>
-        <!-- <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2F1day1commit.github.io&count_bg=%231D1D1D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a> -->
-        <!-- <div>
+        <div>
           <img
-            src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2F1day1commit.github.io&count_bg=%231D1D1D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"
+            src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2F{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}/{{ page.url | remove_first: '/' | replace: '/', '-' }}&count_bg=%231D1D1D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"
           />
-        </div> -->
+        </div>
       </div>
       {% endif %}
     </div>
