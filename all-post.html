@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: 전체 글
 ---
 
 {% assign categories_max = 0 %} {% for category in site.categories %} {% if
@@ -38,9 +38,9 @@ category[1].size > categories_max %} {% assign categories_max = category[1].size
       <hr />
 
       <div class="tags-expo-section">
-        <a href="/all-post"><h4>최근 포스팅</h4></a>
+        <a href="/recent-post"><h4>전체 글</h4></a>
         <ul class="tags-expo-posts">
-          {% for post in site.posts offset: 0 limit: 10 %}
+          {% for post in site.posts offset: 0 %}
           <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
             <li>
               {{ post.title }}
@@ -50,38 +50,7 @@ category[1].size > categories_max %} {% assign categories_max = category[1].size
           {% endfor %}
         </ul>
 
-        {% for i in (1..categories_max) reversed %} {% for category in
-        site.categories %} {% if category[1].size == i %}
-        <a class="category-title"
-          ><h2 id="{{ category[0] | slugify }}">
-            {{ category[0] }} ({{i}})
-          </h2></a
-        >
-        <ul class="tags-expo-posts">
-          {% for post in category[1] offset: 0 limit: 50 %}
-          <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-            <li>
-              {{ post.title }}
-              <small class="post-date">{{ post.date | date_to_string }}</small>
-            </li>
-          </a>
-          {% endfor %}
-        </ul>
-        {% endif %}{% endfor %}{% endfor %}
-      </div>
+
     </div>
-
-    <!-- 카테고리 글 숨김, 표시 전환 코드 -->
-    <script type="text/javascript">
-      $('.category-title').click(function () {
-        if ($(this).next().css('display') === 'block') {
-          $(this).next().slideUp();
-          $(this).children().css('color', '#393939');
-        } else {
-          $(this).next().slideDown('slow');
-          $(this).children().css('color', '#ec4c6a');
-        }
-      });
-    </script>
   </body>
 </html>
