@@ -10,6 +10,11 @@ layout: default
     >{{ tag }}</a
   >
   {% endfor %} {% endif %}
+  <!-- <div>
+    <img
+      src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2F{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}/{{ page.url | remove_first: '/' | replace: '/', '-' }}&count_bg=%231D1D1D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"
+    />
+  </div> -->
   <article class="post-article">
     {% if page.toc %}
     <div class="toc">
