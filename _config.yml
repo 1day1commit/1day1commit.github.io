@@ -9,10 +9,25 @@ url: https://1day1commit.github.io
 # Site configurations
 gems:
   - jekyll-paginate
+
+# Conversion  
 markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
 kramdown:
   input: GFM
-  syntax_highligther: rouge
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
 excerpt_separator: "<!-- more -->"
 sass:
   style: compressed
