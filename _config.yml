@@ -43,13 +43,12 @@ nav:
   
   Categories:
     - '/'
-    - { TIL: '/categories/til' }
-    - { React: '/categories/react' }
     - { JavaScript: /categories/javascript }
-    - { HTML/CSS: /categories/html-css }
+    - { React: '/categories/react' }
     - { Git/GitHub: /categories/git-github }
-    - { HTTP: /categories/http }
     - { 알고리즘: /categories/algorithm }
+    - { HTTP: /categories/http }
+    - { HTML/CSS: /categories/html-css }
     - { WeCode: /categories/wecode }
     
   Tags:
