@@ -45,6 +45,8 @@ nav:
     - '/'
     - { JavaScript: /categories/javascript }
     - { React: '/categories/react' }
+    - { Node.js: '/categories/node'}
+    - { Database: '/categories/database'}
     - { Git/GitHub: /categories/git-github }
     - { 알고리즘: /categories/algorithm }
     - { HTTP: /categories/http }
